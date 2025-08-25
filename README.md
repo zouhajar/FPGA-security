@@ -1,34 +1,32 @@
 
+# FPGA Project: ECG Signal Encryption with ASCON
 
-# Projet FPGA : Chiffrement des Signaux ECG avec ASCON
+## Overview
 
-## Présentation
-
-Ce projet met en place un système de chiffrement sécurisé pour des signaux ECG en exploitant un FPGA.
-Les trames ECG sont lues depuis un fichier CSV, transmises via UART à une carte FPGA où elles sont chiffrées avec l’algorithme **ASCON** (chiffrement léger et sécurisé). Elles sont ensuite renvoyées vers un script Python pour déchiffrement et visualisation.
+This project implements a secure encryption system for ECG signals using an FPGA.
+ECG frames are read from a CSV file, transmitted via UART to an FPGA board where they are encrypted with the **ASCON** algorithm (lightweight and secure). The encrypted data is then sent back to a Python script for decryption and visualization.
 
 ## Architecture
 
-* **FPGA (Pynq-Z2)** : implémentation de l’algorithme ASCON et FSM de pilotage
-* **UART FSM** : gestion de la communication série
-* **Python** : récupération des signaux, déchiffrement et affichage des ECG
+* **FPGA (Pynq-Z2)**: ASCON algorithm implementation with control FSM
+* **UART FSM**: manages serial communication
+* **Python**: signal acquisition, decryption, and ECG visualization
 
-## Étapes principales
+## Main Steps
 
-1. Programmation du FPGA avec le bitstream fourni (`FPGA_ASCON128/`).
-2. Connexion du module UART sur le port PMOD A et liaison USB avec l’ordinateur.
-3. Exécution du script `communication_fpga.py` (répertoire `communication_python/`) pour l’interface utilisateur.
+1. Program the FPGA with the provided bitstream (`FPGA_ASCON128/`).
+2. Connect the UART module to the PMOD A port of the Pynq-Z2 board and link it to the PC via USB.
+3. Run the script `communication_fpga.py` (in the `communication_python/` directory) to access the user interface.
 
-## Fonctionnalités
+## Features
 
-* Lecture des ECG depuis un fichier CSV
-* Transmission au FPGA pour chiffrement
-* Réception et déchiffrement via Python
-* Visualisation et comparaison des signaux avant/après chiffrement
+* Read ECG signals from a CSV file
+* Transmit signals to the FPGA for encryption
+* Receive and decrypt data via Python
+* Visualize and compare signals before and after encryption
 
-## Prérequis
+## Requirements
 
-* Carte FPGA **Pynq-Z2**
-* Logiciel **Vivado** pour la programmation
-* Python 3 avec bibliothèques : `pyserial`, `matplotlib`, `pandas`
-
+* FPGA board **Pynq-Z2**
+* **Vivado** software for FPGA programming
+* Python 3 with the following libraries: `pyserial`, `matplotlib`, `pandas`
