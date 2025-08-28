@@ -13,7 +13,7 @@ ECG frames are read from a CSV file, transmitted via UART to an FPGA board where
 * **UART FSM**: manages serial communication
 * **Python**: signal acquisition, decryption, and ECG visualization
 
-   <img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/a5998826-4027-465f-b45b-c330d9241c7a" />
+   <img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/a5998826-4027-465f-b45b-c330d9241c7a" />
 
 
 ## Main Steps
