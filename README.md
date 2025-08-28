@@ -1,6 +1,7 @@
 
 # FPGA Project: ECG Signal Encryption with ASCON
 
+
 ## Overview
 
 This project implements a secure encryption system for ECG signals using an FPGA.
@@ -11,6 +12,8 @@ ECG frames are read from a CSV file, transmitted via UART to an FPGA board where
 * **FPGA (Pynq-Z2)**: ASCON algorithm implementation with control FSM
 * **UART FSM**: manages serial communication
 * **Python**: signal acquisition, decryption, and ECG visualization
+* <img width="310" height="112" alt="image" src="https://github.com/user-attachments/assets/a5998826-4027-465f-b45b-c330d9241c7a" />
+
 
 ## Main Steps
 
